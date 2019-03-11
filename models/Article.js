@@ -11,15 +11,16 @@ var ArticleSchema = new Schema({
         required: true
     },
     //link requires a string
-    link: {
+    url: {
         type: String,
         required: true
     },
     summary: {
         type: String,
     },
-    byline: {
-        type: String,
+    saved: {
+        type: Boolean,
+        default: false
     },
     //Saves one note's ObjectID, the ref refers to the Note model
     note: [{
